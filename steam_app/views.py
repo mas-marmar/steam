@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+def hello(request):
+    values = ["dklnh", "pomogite"]
+    return render(request, 
+                  'main.html',
+                  {'values': values,
+                   'is_draw_note': True})
+
+
